@@ -1,0 +1,634 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Ubuntu" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <style>
+        .center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 60px;
+            margin: 50px auto;
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@600&display=swap');
+
+        body {
+            font-family: "Montserrat";
+        }
+
+        *#title {
+            /* background-color: #ff4c68; */
+            background-color: #9acd32;
+            color: #ffffff;
+
+        }
+
+        hr {
+            background-color: indigo;
+
+        }
+
+        h1 {
+            font-family: "Montserrat-Black";
+            font-size: 3rem;
+            line-height: 1.5;
+        }
+
+        h3 {
+            font-family: "Montserrat-Bold";
+            font-size: 1.5rem;
+        }
+
+        p {
+            color: grey;
+        }
+
+        h2 {
+            font-family: "Montserrat-Bold";
+            font-size: 3rem;
+        }
+
+        .container-fluid {
+            padding: 3% 15%;
+        }
+
+        .download-button {
+            margin: 5% 3% 5% 0%;
+        }
+
+        /* navbar */
+        .navbar:nth-child(1) {
+            padding: 0 0 4.5rem;
+        }
+
+        .navbar-brand {
+            font-family: "Ubuntu";
+            font-size: 2.0rem;
+            font-weight: bold;
+            color: #ffffff;
+        }
+
+        .nav-item {
+            padding: 0 18px;
+        }
+
+        .our_services {
+            font-family: "Montserrat-Bold";
+            font-size: 2.5rem;
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+        }
+
+        .nav-link {
+            font-size: 1.2rem;
+            font-family: "Montserrat";
+        }
+
+        /* title image */
+        .title-image {
+            border-radius: 100%;
+            width: 60%;
+        }
+
+        .title-image:hover {
+            height: 300px;
+            border-radius: 30% 30% 30% 30%;
+        }
+
+        /* features section */
+        #features {
+            padding: 7% 15%;
+            margin-top: 1px;
+        }
+
+        .feature-box {
+            text-align: center;
+            padding: 5%;
+        }
+
+
+        
+        .sidenav {
+            height: 100%;
+            /* 100% Full-height */
+            width: 0;
+            /* 0 width - change this with JavaScript */
+            position: fixed;
+            /* Stay in place */
+            z-index: 1;
+            /* Stay on top */
+            top: 0;
+            /* Stay at the top */
+            left: 0;
+            background-color: #111;
+            /* Black*/
+            overflow-x: hidden;
+            /* Disable horizontal scroll */
+            padding-top: 60px;
+            /* Place content 60px from the top */
+            transition: 0.5s;
+            /* 0.5 second transition effect to slide in the sidenav */
+        }
+
+        /* The navigation menu links */
+        .sidenav a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+        }
+
+        /* When you mouse over the navigation links, change their color */
+        .sidenav a:hover {
+            color: #f1f1f1;
+        }
+        .sidenav .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+        #main {
+            transition: margin-left .5s;
+            padding: 20px;
+        }
+        @media screen and (max-height: 450px) {
+            .sidenav {
+                padding-top: 15px;
+            }
+
+            .sidenav a {
+                font-size: 18px;
+            }
+        }
+
+
+        .fa {
+            color: #fff;
+
+
+        }
+
+        #dr {
+
+
+            padding: 4px;
+            font-size: 15px;
+            width: 45px;
+            float: right;
+            margin-right: -1000px;
+            color: white;
+            display: none;
+
+        }
+
+        @media (max-width: 1100px) {
+            #dr {
+                margin-right: 0px;
+            }
+        }
+
+        #navbarTogglerDemo02 {
+            font-size: 20px;
+            justify-content: space-around;
+            margin-right: 20px;
+            padding-left: 3%;
+
+
+        }
+
+        #space {
+            margin-right: 3px;
+        }
+
+        @media(max-width: 992px) {
+            #listt {
+                display: none;
+            }
+        }
+
+        @media (max-width: 991px) {
+
+            #dr {
+                display: block;
+            }
+
+        }
+
+        @import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+        .cards-body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: #ebf5fc;
+        }
+
+        .cards {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            max-width: 1200px;
+            flex-wrap: wrap;
+            padding: 40px 0;
+        }
+
+        .cards .card {
+            position: relative;
+            width: 320px;
+            height: 440px;
+            box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.05),
+                inset -5px -5px 5px rgba(255, 255, 255, 0.5),
+                5px 5px 5px rgba(0, 0, 0, 0.05),
+                -5px -5px 5px rgba(255, 255, 255, 0.5);
+            border-radius: 15px;
+            margin: 30px;
+        }
+
+        .cards .card .box {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+            background: #ebf5fc;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            border-radius: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: 0.5s;
+        }
+
+        .cards .card:hover .box {
+            transform: translateY(-50px);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+            background: linear-gradient(45deg, #b95ce4, #4f29cd);
+        }
+
+        .cards .card .box .content {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .cards .card .box .content h2 {
+            position: absolute;
+            top: -10px;
+            right: 30px;
+            font-size: 8em;
+            color: rgba(0, 0, 0, 0.02);
+            transition: 0.5s;
+            pointer-events: none;
+        }
+
+        .cards .card:hover .box .content h2 {
+            color: rgba(0, 0, 0, 0.09);
+        }
+
+        .cards .card:hover .box .content h3 {
+            font-size: 1.8em;
+            color: #fff;
+            z-index: 1;
+            transition: 0.5s;
+        }
+
+        .cards .card .box .content p {
+            font-size: 1em;
+            font-weight: 300;
+            color: #777;
+            z-index: 1;
+            transition: 0.5s;
+        }
+
+        .cards .card:hover .box .content p {
+            color: #fff;
+        }
+
+        .cards .card .box .content a {
+            position: relative;
+            display: inline-block;
+            padding: 8px 20px;
+            background: #03a9f4;
+            margin-top: 15px;
+            border-radius: 20px;
+            color: #fff;
+            text-decoration: none;
+            font-weight: 400;
+            box-shadow: 0 10px 20px rgba(2, 0, 0, 0.2);
+        }
+
+        .cards .card:hover .box .content a {
+            background: #ff568f;
+        }
+    </style>
+    </style>
+    <script src="https://use.fontawesome.com/180bbea00e.js"></script>
+    <title>Mailer Daemon</title>
+</head>
+
+
+<body>
+    <section id="title">
+        <div class="container-fluid" style="padding-bottom: 40px;">
+
+        </div>
+        <div class="container-fluid" style="height: 300px;margin-top: 40px;padding-right: 0%;margin-right: 0%;">
+            <!-- navbar -->
+            <nav class="navbar navbar-expand-lg navbar-light fixed-top py-2" style="background-color:#F4A460">
+                <a class="navbar-brand" href="#" style="line-height: 3rem;padding-left: 1%;"><img class="title-image"
+                        src="https://media-exp1.licdn.com/dms/image/C510BAQHKBAWCAVVpPA/company-logo_200_200/0/1519895551382?e=1616025600&v=beta&t=W8-bp0XbPnvoHExQqMjDZ_gxiYVGVHmZVk-B-0R9-us"
+                        alt="Not in the phone" style="height:40px; width:40px;"> Mailer Daemon</a>
+                <div>
+                    <div id="mySidenav" class="sidenav" style="display: flex;flex-direction: column;">
+                        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                        <a href="index.html"><i class="fa fa-fw fa-home" style="color:#F4A460"></i> Home</a>
+                        <a href="blog.html"><i class="fa fa-fw fa-envelope" style="color:#F4A460"></i>Write Blogs</a>
+                        <a href="blog view.html"><i class="fa fa-fw fa-envelope" style="color:#F4A460"></i>Visit Blogs</a>
+                        <a href="placement.html"><i class="fa fa-money" aria-hidden="true" style="color:#F4A460"></i> Placements</a>
+                        <a href="user.html"><i class="fa fa-fw fa-user" style="color:#F4A460"></i>User Profile</a>
+                        <a href="Sign In.html"><i class="fa fa-fw fa-user" style="color:#F4A460"></i>SignUp/LogIn</a>
+
+                    </div>
+                    <div onclick="openNav()" style="margin-right: 5%;padding: 5%;">
+                        <button type="button" class="btn btn-lg my-2 my-lg-0 download-button" id="dr"><i
+                                class="fa fa-bars" aria-hidden="true"></i></button>
+                    </div>
+                </div>
+
+
+
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                    <ul class="navbar-nav ml-auto" id="listt">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html" id="space">Home</a>
+                        </li>
+
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="blog.html" id="space"> Write Blogs</a>
+
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="blog view.html" id="space">Visit Blogs</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="placement.html" id="space">Placement</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="user.html" id="space">User Profile</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="Sign In.html" id="space">SignUp/LogIn</a>
+                        </li>
+
+
+
+                    </ul>
+                </div>
+
+            </nav>
+
+            <!-- title -->
+            <div class="row container">
+                <div class="col-lg-12">
+                    <div class="my_writer">
+                        <h1>
+                            <a href="" class="typewrite" data-period="2000"
+                                data-type='[ "Welcome, to Mailer Daemon.", "Newsletter of IIT(ISM) Dhanbad" ]'
+                                style="color:white;">
+                                <span class="wrap"></span>
+                            </a>
+                        </h1>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+    <!-- features -->
+    <section id="features">
+        <div class="row our_services">
+            <u>
+                <h2 style="display: flex;justify-content: center;text-align: center;">Daemons we Provide</h2>
+            </u>
+        </div>
+    </section>
+
+    <div class="cards-body">
+        <div class="cards">
+            <div class="card">
+                <div class="box">
+                    <div class="content">
+                        <h2>01</h2>
+                        <h3>Placement Daemon</h3>
+                        <p> You must be extremely excited to know the internship and placement statistics of your
+                            respective branches which are all posted under the hashtag PlacementDaemon.
+                        </p>
+                        <a href="placement.html">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="box">
+                    <div class="content">
+                        <h2>02</h2>
+                        <h3>Lost And Found</h3>
+                        <p>If you lose any of your belongings in the campus you need not to worry.Since we are there
+                            ensuring you find them by posting it on FB page under hashtag LostAndFound</p>
+
+                        <a href="lostnfound.html">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="box">
+                    <div class="content">
+                        <h2>03</h2>
+                        <h3>Campus Daemon</h3>
+                        <p>If you want to know about various events going on in the campus you can have full faith in
+                            us.We provide you instant information about all these under hashtag CampusDaemon.</p>
+                        <a href="campus.html">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="box">
+                    <div class="content">
+                        <h2>04</h2>
+                        <h3>Capturado Daemon</h3>
+                        <p>We have a strong team of videographers who try their best to shoot and edit videos of almost
+                            all the events.Spectate skillfully shot videos of all events under the hashtag
+                            CapturaDoDaemon.</p>
+                        <a href="campus.html">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="box">
+                    <div class="content">
+                        <h2>05</h2>
+                        <h3>Penned Daemon</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <a href="campus.html">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="box">
+                    <div class="content">
+                        <h2>06</h2>
+                        <h3>BC Daemon</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <a href="campus.html">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script>
+        var angle = 0;
+        function galleryspin(sign) {
+            spinner = document.querySelector("#spinner");
+            if (!sign) { angle = angle + 45; } else { angle = angle - 45; }
+            spinner.setAttribute("style", "-webkit-transform: rotateY(" + angle + "deg); -moz-transform: rotateY(" + angle + "deg); transform: rotateY(" + angle + "deg);");
+        }
+
+        var TxtType = function (el, toRotate, period) {
+            this.toRotate = toRotate;
+            this.el = el;
+            this.loopNum = 0;
+            this.period = parseInt(period, 10) || 2000;
+            this.txt = '';
+            this.tick();
+            this.isDeleting = false;
+        };
+
+        TxtType.prototype.tick = function () {
+            var i = this.loopNum % this.toRotate.length;
+            var fullTxt = this.toRotate[i];
+
+            if (this.isDeleting) {
+                this.txt = fullTxt.substring(0, this.txt.length - 1);
+            } else {
+                this.txt = fullTxt.substring(0, this.txt.length + 1);
+            }
+
+            this.el.innerHTML = '<span class="wrap">' + this.txt + '</span>';
+
+            var that = this;
+            var delta = 200 - Math.random() * 100;
+
+            if (this.isDeleting) { delta /= 2; }
+
+            if (!this.isDeleting && this.txt === fullTxt) {
+                delta = this.period;
+                this.isDeleting = true;
+            } else if (this.isDeleting && this.txt === '') {
+                this.isDeleting = false;
+                this.loopNum++;
+                delta = 500;
+            }
+
+            setTimeout(function () {
+                that.tick();
+            }, delta);
+        };
+
+        window.onload = function () {
+            var elements = document.getElementsByClassName('typewrite');
+            for (var i = 0; i < elements.length; i++) {
+                var toRotate = elements[i].getAttribute('data-type');
+                var period = elements[i].getAttribute('data-period');
+                if (toRotate) {
+                    new TxtType(elements[i], JSON.parse(toRotate), period);
+                }
+            }
+            // INJECT CSS
+            var css = document.createElement("style");
+            css.type = "text/css";
+            css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
+            document.body.appendChild(css);
+        };
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+            document.getElementById("main").style.marginLeft = "250px";
+            document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+        }
+
+        /* Set the width of the side navigation to 0 and the left margin of the page content to 0, and the background color of body to white */
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+            document.getElementById("main").style.marginLeft = "0";
+            document.body.style.backgroundColor = "white";
+        }
+    </script>
+</body>
+<footer>
+    <hr>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="Contact-Us">
+        <a class="navbar-brand" href="#">Contact Us</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+            aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link"
+                        href="https://www.facebook.com/MDiitism/?__xts__[0]=68.ARCHcGPhUIaM6dOH49sbEiT-B"><i
+                            class="fa fa-facebook" aria-hidden="true"></i> Facebook</i></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://www.instagram.com/md_iit_dhanbad/"><i class="fa fa-instagram"
+                            aria-hidden="true"></i> Instagram</i></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://www.linkedin.com/company/mailer-daemon/?originalSubdomain=in"><i
+                            class="fa fa-linkedin" aria-hidden="true"></i> LinkedIn</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://www.youtube.com/channel/UCrcdJ3AGxugb7X2k5uadBFg"><i
+                            class="fa fa-youtube" aria-hidden="true"></i> Youtube</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</footer>
+
+</html>

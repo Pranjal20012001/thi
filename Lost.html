@@ -1,0 +1,194 @@
+<!doctype html>
+
+<html>
+
+<head>
+  <title>Sign In</title>
+  <!-- <link rel="stylesheet" href="style.css"> -->
+  <style>
+    body
+{
+	
+	margin:0;
+	padding:0;
+	background-color: #9ded91;
+	background-size:cover;
+	font-family: sans-serif; 
+}
+
+.loginBox
+{
+	position:absolute;
+	top:50%;
+	left:50%;
+  transform: translate(-50%, -50%);
+  
+	width:40%;
+	height:550px;
+	padding:80px 40px;
+	box-sizing: border-box;
+  background:rgba(0,0,0,0.5) ;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* align-content: center; */
+  /* text-align: center; */
+}
+
+
+
+h2
+{
+	margin:0;
+	padding:0 0 20px;
+	color:#faa550;
+	text-align:center;
+} 
+
+
+
+.loginBox p
+{
+	padding:0;
+	margin:0;
+	font-weight:bold;
+	color:#fff;
+	
+} 
+
+
+.loginBox input
+{
+	width:100%;
+	margin-bottom: 20px; 
+}
+
+.loginBox input[type="text"], .loginBox input[type="password"]
+{
+	border: none;
+	border-bottom: 1px solid #fff;
+	background: transparent;
+	outline:none;
+	height:40px;
+	color:#fff;
+	font-size: 16px;
+	
+	
+}
+
+
+.loginBox input[type="submit"]
+{
+	border:none;
+	outline:none;
+	height: 50px;
+	color:#fff;
+	font-size:16px;
+	background-color:#faa550;
+	width: 100px;
+	cursor:pointer;
+	border-radius:20px;
+	margin-left: 40%;
+	padding: 5px;
+}
+
+
+.loginBox input[type="submit"]:hover
+{
+	background: #9ded91;
+  color: #262626;
+  justify-content: center;
+  align-items: center;
+}
+ 
+ 
+ 
+
+.loginBox a
+{
+	color: #fff;
+	font-size:14px;
+	font-weight:bold;
+} 
+
+
+::placeholder
+{
+	color:rgba(255,255,255,0.5); 
+}
+
+#fog{
+	margin-left: 2px;
+	margin-top: 20px;
+	
+}
+#head a{
+	margin-left: 7px;
+	color: white;
+	
+}
+.user
+{
+	width:100px;
+	height:100px; 
+	overflow:hidden;
+	position:absolute;
+	top:calc(-100px/2);
+	left:calc(50% - 50px);
+	border-radius:50%;
+}
+#anc{
+	text-decoration: underline;
+	font-size: 16px;
+	color: #529bbf;
+	cursor: pointer;
+	
+} 
+#head{
+	color: white;
+
+	
+}
+@media (max-width: 1000px)
+{
+	.loginBox{
+		width : 75%;
+		height: 590px;
+		margin-top: 40px;
+	}
+	.loginBox input[type="submit"]{
+		margin-top: 20px;
+		font-size: 30px;
+		width: 130px;
+		height: 60px;
+		margin-left: 30%;
+	}
+}
+  </style>
+
+</head>
+
+<body>
+  <div class="loginBox">
+
+    <img src="https://www.xlentdental.com/wp-content/uploads/2019/02/171-1717870_stockvader-predicted-cron-for-may-user-profile-icon-png.jpg" class="user">
+    <h2>Enter your personal info</h2>
+    <form action="/signin" method="post">
+      <p>Name</p>
+      <input type="text" name="username" placeholder="Enter your Name">
+      <p>Admission No.</p>
+      <input type="text" name="password" placeholder="Enter your Admission No.">
+      <p>Object Lost</p>
+      <input type="text" name="userobject" placeholder="Enter Lost Object">
+      <p>Contact No.</p>
+      <input type="password" name="contact" placeholder="Enter your Contact No.">
+      <input type="submit" name="" value="Submit">
+      <!-- <a href="#" id="fog"> Forget Password?</a>
+      <h4 id="head">Not Registered?<a id="anc" href="Sign up.html">Sign Up Here</a></h4> -->
+
+    </form>
+  </div>
+</body>
+
+</html>
